@@ -28,7 +28,7 @@ import RunningCham from "../components/RunningCham";
       children:[{
         path:'/',
         element:<Home></Home>,
-        loader: () => fetch('http://localhost:3000/donation')
+        loader: () => fetch('https://heart-lift-serversite.vercel.app/donation')
         
         
       }, 
@@ -50,7 +50,7 @@ import RunningCham from "../components/RunningCham";
   {
     path:'/allCampaign',
     element: <AllCampaign></AllCampaign>,
-    loader: () => fetch('http://localhost:3000/donation')
+    loader: () => fetch('https://heart-lift-serversite.vercel.app/donation')
   }
   , 
   {
@@ -61,7 +61,7 @@ import RunningCham from "../components/RunningCham";
   {
     path:'/runnigCampaign',
     element:<RunningCham></RunningCham>,
-    loader: () => fetch('http://localhost:3000/donation')
+    loader: () => fetch('https://heart-lift-serversite.vercel.app/donation')
 
   },
   
@@ -83,13 +83,13 @@ import RunningCham from "../components/RunningCham";
     {
       path:'/details/:id',
       element:<PrivateRoutes><Details></Details></PrivateRoutes>,
-      loader:({params}) => fetch(`http://localhost:3000/donation/${params.id}`)
+      loader:({params}) => fetch(`https://heart-lift-serversite.vercel.app/donation/${params.id}`)
     },
 
     {
       path:'/updateMyCampaign/:id',
       element:<UpdateMyCampaign></UpdateMyCampaign>,
-      loader: ({params}) => fetch(`http://localhost:3000/donation/${params.id}`)
+      loader: ({params}) => fetch(`https://heart-lift-serversite.vercel.app/donation/${params.id}`)
     }
   
 ]

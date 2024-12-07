@@ -31,7 +31,7 @@ const UpdateMyCampaign = () => {
       const updateDonation = {title,photo,option,description,donation,date,email,name};
       //console.log(updateDonation)
   
-      fetch(`http://localhost:3000/donation/${_id}`, {
+      fetch(`https://heart-lift-serversite.vercel.app/donation/${_id}`, {
         method:'PUT',
         headers:{
           'content-type':'application/json'

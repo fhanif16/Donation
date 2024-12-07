@@ -156,7 +156,7 @@ const Details = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/money', {
+      const response = await fetch('https://heart-lift-serversite.vercel.app/money', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

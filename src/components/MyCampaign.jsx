@@ -34,7 +34,7 @@ const MyCampaign = () => {
         //   });
 
 
-        fetch(`http://localhost:3000/donation/${_id}`, {
+        fetch(`https://heart-lift-serversite.vercel.app/donation/${_id}`, {
             
             method:'DELETE'
         })
@@ -84,7 +84,7 @@ const MyCampaign = () => {
 
   useEffect(() => {
     if (user && user.email) {
-      fetch(`http://localhost:3000/myDonation?email=${user.email}`)
+      fetch(`https://heart-lift-serversite.vercel.app/myDonation?email=${user.email}`)
         .then((response) => response.json())
         .then((data) => setDonations(data))
         .catch((error) => console.error('Error fetching donations:', error));

@@ -24,7 +24,7 @@ const AddChampaing = () => {
     const newDonation = {title,photo,option,description,donation,date,email,name};
    // console.log(newDonation)
 
-    fetch('http://localhost:3000/donation', {
+    fetch('https://heart-lift-serversite.vercel.app/donation', {
       method:'POST',
       headers:{
         'content-type':'application/json'
