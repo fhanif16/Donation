@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "cause": "Community Kitchen Volunteer",
+      "picture": "https://img.freepik.com/free-photo/people-working-together-donation-facility_23-2148687355.jpg?t=st=1733451534~exp=1733455134~hmac=0d692f61478627b535110d1901074dd7e1da7df478e78bd6c7b00e860ec6aa8c&w=1380",
+      "motivationalLine": "Your time can serve a thousand smiles."
+    },
+    {
+      "id": 2,
+      "cause": "Tutoring Underprivileged Kids",
+      "picture": "https://img.freepik.com/free-photo/nomad-family-traveling-living-van_23-2149651476.jpg?t=st=1733451568~exp=1733455168~hmac=ffc077def514446e67a1599be9d0699f5dee8052abfa15d5e1a575300ee30f12&w=1060",
+      "motivationalLine": "A few hours can build futures."
+    },
+    {
+      "id": 3,
+      "cause": "Beach Cleanup Drive",
+      "picture": "https://img.freepik.com/free-photo/people-cleaning-garbage-from-nature_23-2149121335.jpg?t=st=1733451598~exp=1733455198~hmac=ec666b50cb9132bf935ddc4ca86e97e097232b320ccf61241f572a7431f6bcd0&w=1060",
+      "motivationalLine": "Small actions today, a cleaner tomorrow."
+    },
+    {
+      "id": 4,
+      "cause": "Senior Care Visits",
+      "picture": "https://img.freepik.com/free-photo/social-worker-taking-care-senior-woman_23-2149031341.jpg?t=st=1733451642~exp=1733455242~hmac=7e5a6391659114a3c1eec523eaa560aebe4ef3f7ff2861cf7cf5d6cec6fbc322&w=1060",
+      "motivationalLine": "Companionship is the most precious gift you can give."
+    },
+    {
+      "id": 5,
+      "cause": "Tree Plantation Event",
+      "picture": "https://img.freepik.com/free-photo/father-son-planting-tree_23-2148814068.jpg?t=st=1733451714~exp=1733455314~hmac=d77d8f115215ccb7168f437627cbb2943bc631ea705aee4cea0d9cb3d29fe1b6&w=1060",
+      "motivationalLine": "Plant time today, harvest hope tomorrow."
+    },
+    {
+      "id": 6,
+      "cause": "Animal Shelter Volunteer",
+      "picture": "https://img.freepik.com/free-photo/medium-shot-smiley-women-with-cute-rabbit_23-2149514560.jpg?t=st=1733451746~exp=1733455346~hmac=26e3ec742d7ab005c421b6d66108f463284187bc44d98a05e1f240e34d892f1d&w=1060",
+      "motivationalLine": "Kindness to animals is kindness to ourselves."
+    },
+    {
+      "id": 7,
+      "cause": "Hospital Helper Program",
+      "picture": "https://img.freepik.com/free-photo/medium-shot-doctors-work_23-2149856236.jpg?t=st=1733451776~exp=1733455376~hmac=99c3d3b265f543ce7618b09a3713f17dc4e0f371fd911199f94323a79491e723&w=1060",
+      "motivationalLine": "A caring hand can heal many hearts."
+    },
+    {
+      "id": 8,
+      "cause": "Library Literacy Support",
+      "picture": "https://img.freepik.com/free-photo/girl-helping-her-colleague-wheelchair-choose-book-project_23-2148844703.jpg?t=st=1733451814~exp=1733455414~hmac=da695b211aa294d5e13722ed781efa5bb5c2ee3914839a7ff3032a0d2543b98a&w=1060",
+      "motivationalLine": "Your voice can open a world of imagination."
+    },
+    {
+      "id": 9,
+      "cause": "Sports Coaching for Kids",
+      "picture": "https://img.freepik.com/free-photo/football-trainer-teaching-his-pupils_23-2149708010.jpg?t=st=1733451844~exp=1733455444~hmac=e9687606e0b9b96e5199c0f954fee2f321057e0f7b780143b9c9387a4a917216&w=1060",
+      "motivationalLine": "Empower the next generation through play."
+    }
+  ]
+  
