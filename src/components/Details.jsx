@@ -222,12 +222,7 @@ const Details = () => {
           <p className="text-gray-600 mb-4">
             <strong>Date:</strong> {detail.date}
           </p>
-          {/* <button
-            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
-            onClick={handleDonate}
-          >
-            Donate
-          </button> */}
+          
 
 <button
             className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
