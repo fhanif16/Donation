@@ -119,7 +119,7 @@
 
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import toast from 'react-hot-toast';
+
 import { AuthContext } from '../providers/Authprovider';
 import Swal from 'sweetalert2';
 
