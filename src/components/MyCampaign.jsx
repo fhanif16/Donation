@@ -9,7 +9,7 @@ const MyCampaign = () => {
   const [donations, setDonations] = useState([]);
 
   const handleDelete = (_id) => {
-    console.log(_id)
+    //console.log(_id)
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
           confirmButton: "btn btn-success",
