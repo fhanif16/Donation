@@ -87,7 +87,7 @@ const MyDonations = () => {
   const [donations, setDonations] = useState([]);
 
   const handleDelete = (_id) => {
-    console.log(_id)
+   // console.log(_id)
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
           confirmButton: "btn btn-success",
@@ -189,7 +189,7 @@ const MyDonations = () => {
             <div key={donation._id} className="card bg-base-100 w-full shadow-xl">
               <figure>
                 <img
-                  src={donation.photo}
+                 src={donation.photo}
                   alt={donation.title}
                   className="w-full h-48 object-cover"
                 />
