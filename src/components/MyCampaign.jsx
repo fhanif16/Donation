@@ -40,7 +40,7 @@ const MyCampaign = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+           // console.log(data)
             if(data.deletedCount >0){
                 swalWithBootstrapButtons.fire({
                         title: "Deleted!",
