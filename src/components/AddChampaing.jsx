@@ -41,6 +41,8 @@ const AddChampaing = () => {
           text: 'Thank you for your support',
           icon: 'success',
       });
+
+      form.reset();
        
       }
     } 

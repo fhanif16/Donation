@@ -127,7 +127,23 @@ const Details = () => {
   const detail = useLoaderData();
   const { user } = useContext(AuthContext); 
 
+  const currentDate = new Date();
+  const deadlineDate = new Date(detail.date);
+  const isDeadlinePassed = currentDate > deadlineDate;
+
   const handleDonate = async () => {
+
+    if (isDeadlinePassed) {
+      
+      Swal.fire({
+        title: "Campaign Expired",
+        text: "This campaign has expired, and you cannot donate to it anymore.",
+        icon: "warning",
+      });
+      return; 
+    }
+
+    
     
 
     const donationData = {
@@ -136,6 +152,7 @@ const Details = () => {
       name: user.displayName || 'Anonymous',
       donation: detail.donation,
       date: new Date().toISOString(),
+      photo:detail.photo
     };
 
     try {
@@ -178,13 +195,13 @@ const Details = () => {
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">{detail.title}</h2>
           {detail.picture ? (
             <img
-              src={detail.picture}
+              src={detail.photo}
               alt={detail.title}
               className="w-full h-48 object-cover mb-4 rounded"
             />
           ) : (
-            <div className="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">
-              No Image Available
+            <div className="w-full  bg-gray-200 flex items-center justify-center text-gray-500">
+             <img src={detail.photo} alt="" srcset="" />
             </div>
           )}
           <p className="text-gray-600 mb-2">
@@ -205,9 +222,17 @@ const Details = () => {
           <p className="text-gray-600 mb-4">
             <strong>Date:</strong> {detail.date}
           </p>
-          <button
+          {/* <button
             className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
             onClick={handleDonate}
+          >
+            Donate
+          </button> */}
+
+<button
+            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+            onClick={handleDonate}
+           
           >
             Donate
           </button>

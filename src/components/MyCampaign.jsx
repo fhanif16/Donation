@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../providers/Authprovider';
+import { Link } from 'react-router-dom';
 
 const MyCampaign = () => {
   const { user, loading } = useContext(AuthContext);
@@ -47,8 +48,22 @@ const MyCampaign = () => {
                         icon: "success"
                       });
 
+
+                      const remaining = donations.filter(don=>don._id!==_id)
+   setDonations(remaining)
+
+
+                      
+
             }
         })
+
+        
+
+       
+
+
+        
 
 
        
@@ -128,9 +143,13 @@ const MyCampaign = () => {
               <td className="border border-gray-300 px-4 py-2">{campaign.date}</td>
               <td className="border border-gray-300 px-4 py-2">${campaign.donation}</td>
               <td className="border border-gray-300 px-4 py-2 text-center space-x-2">
+                <Link to={`/updateMyCampaign/${campaign._id}`}>
                 <button className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
                   Update
                 </button>
+                
+                
+                </Link>
                 <button onClick={()=> handleDelete(campaign._id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
                   Delete
                 </button>

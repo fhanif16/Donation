@@ -178,91 +178,91 @@ const MyDonations = () => {
 
 
   return (
-    // <div className="container mx-auto px-4 py-8">
-    //   <h1 className="text-3xl font-bold text-center mb-6">My Donations</h1>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-center mb-6">My Donations</h1>
 
-    //   {donations.length === 0 ? (
-    //     <p className="text-center">No donations found.</p>
-    //   ) : (
-    //     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    //       {donations.map((donation) => (
-    //         <div key={donation._id} className="card bg-base-100 w-full shadow-xl">
-    //           <figure>
-    //             <img
-    //               src={donation.photo}
-    //               alt={donation.title}
-    //               className="w-full h-48 object-cover"
-    //             />
-    //           </figure>
-    //           <div className="card-body">
-    //             <h2 className="card-title">{donation.title}</h2>
+      {donations.length === 0 ? (
+        <p className="text-center">No donations found.</p>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {donations.map((donation) => (
+            <div key={donation._id} className="card bg-base-100 w-full shadow-xl">
+              <figure>
+                <img
+                  src={donation.photo}
+                  alt={donation.title}
+                  className="w-full h-48 object-cover"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{donation.title}</h2>
                 
-    //             <p>
-    //               <strong>Amount Donated:</strong> ${donation.donation}
-    //             </p>
-    //             <p>
-    //               <strong>Name:</strong> {donation.name}
-    //             </p>
-    //             <p>
-    //               <strong>Name:</strong> {donation.email}
-    //             </p>
-    //             <div className="card-actions justify-end">
-    //               {/* <button className="btn btn-primary">View Details</button> */}
-    //             </div>
-    //           </div>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   )}
-    // </div>
+                <p>
+                  <strong>Amount Donated:</strong> ${donation.donation}
+                </p>
+                <p>
+                  <strong>Name:</strong> {donation.name}
+                </p>
+                <p>
+                  <strong>Email:</strong> {donation.email}
+                </p>
+                <div className="card-actions justify-end">
+                  {/* <button className="btn btn-primary">View Details</button> */}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
 
 
-    <div className="campaign-table container mx-auto px-4 py-8">
-  <h2 className="text-2xl font-bold mb-4 text-center">My Campaigns</h2>
-  <div className="overflow-x-auto">
-    <table className="table-auto w-full border-collapse border border-gray-300 shadow-lg">
-      <thead className="bg-gray-200">
-        <tr>
-          <th className="border border-gray-300 px-4 py-2 text-left">Campaign Name</th>
-          <th className="border border-gray-300 px-4 py-2 text-left">Donated By</th>
+//     <div className="campaign-table container mx-auto px-4 py-8">
+//   <h2 className="text-2xl font-bold mb-4 text-center">My donation</h2>
+//   <div className="overflow-x-auto">
+//     <table className="table-auto w-full border-collapse border border-gray-300 shadow-lg">
+//       <thead className="bg-gray-200">
+//         <tr>
+//           <th className="border border-gray-300 px-4 py-2 text-left">Campaign Name</th>
+//           <th className="border border-gray-300 px-4 py-2 text-left">Donated By</th>
           
-          <th className="border border-gray-300 px-4 py-2 text-left">Start Date</th>
-          <th className="border border-gray-300 px-4 py-2 text-left">Amount</th>
-          {/* <th className="border border-gray-300 px-4 py-2 text-center">Actions</th> */}
-        </tr>
-      </thead>
-      <tbody>
-        {donations.length > 0 ? (
-          donations.map( (campaign) => (
+//           <th className="border border-gray-300 px-4 py-2 text-left">Start Date</th>
+//           <th className="border border-gray-300 px-4 py-2 text-left">Amount</th>
+//           {/* <th className="border border-gray-300 px-4 py-2 text-center">Actions</th> */}
+//         </tr>
+//       </thead>
+//       <tbody>
+//         {donations.length > 0 ? (
+//           donations.map( (campaign) => (
             
-            <tr key={campaign.id} className="odd:bg-white even:bg-gray-50 hover:bg-gray-100">
-              <td className="border border-gray-300 px-4 py-2">{campaign.title}</td>
+//             <tr key={campaign.id} className="odd:bg-white even:bg-gray-50 hover:bg-gray-100">
+//               <td className="border border-gray-300 px-4 py-2">{campaign.title}</td>
               
-              <td className="border border-gray-300 px-4 py-2">{campaign.name}</td>
+//               <td className="border border-gray-300 px-4 py-2">{campaign.name}</td>
               
-              <td className="border border-gray-300 px-4 py-2">{campaign.date}</td>
-              <td className="border border-gray-300 px-4 py-2">${campaign.donation}</td>
-              {/* <td className="border border-gray-300 px-4 py-2 text-center space-x-2">
-                <button className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
-                  Update
-                </button>
-                <button onClick={()=> handleDelete(campaign._id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
-                  Delete
-                </button>
-              </td> */}
-            </tr>
-          ))
-        ) : (
-          <tr>
-            <td colSpan="5" className="text-center text-gray-500 py-4">
-              No campaigns found. 
-            </td>
-          </tr>
-        )}
-      </tbody>
-    </table>
-  </div>
-</div>
+//               <td className="border border-gray-300 px-4 py-2">{campaign.date}</td>
+//               <td className="border border-gray-300 px-4 py-2">${campaign.donation}</td>
+//               {/* <td className="border border-gray-300 px-4 py-2 text-center space-x-2">
+//                 <button className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
+//                   Update
+//                 </button>
+//                 <button onClick={()=> handleDelete(campaign._id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
+//                   Delete
+//                 </button>
+//               </td> */}
+//             </tr>
+//           ))
+//         ) : (
+//           <tr>
+//             <td colSpan="5" className="text-center text-gray-500 py-4">
+//               No campaigns found. 
+//             </td>
+//           </tr>
+//         )}
+//       </tbody>
+//     </table>
+//   </div>
+// </div>
 
   );
 };

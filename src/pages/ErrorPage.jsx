@@ -10,6 +10,8 @@ const ErrorPage = () => {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
+
+      
     </div>
     );
 };

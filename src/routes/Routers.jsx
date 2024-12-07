@@ -16,6 +16,8 @@ import MyDonations from "../components/MyDonations";
 import AllCampaign from "../components/AllCampaign";
 import Details from "../components/Details";
 import MyCampaign from "../components/MyCampaign";
+import UpdateMyCampaign from "../components/UpdateMyCampaign";
+import RunningCham from "../components/RunningCham";
 
   const router = createBrowserRouter([
     {
@@ -25,7 +27,9 @@ import MyCampaign from "../components/MyCampaign";
       
       children:[{
         path:'/',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader: () => fetch('http://localhost:3000/donation')
+        
         
       }, 
     {
@@ -53,6 +57,13 @@ import MyCampaign from "../components/MyCampaign";
     path:'/tredingCampaings',
     element:<TredingCampaings></TredingCampaings>
   }, 
+
+  {
+    path:'/runnigCampaign',
+    element:<RunningCham></RunningCham>,
+    loader: () => fetch('http://localhost:3000/donation')
+
+  },
   
     {
       path:'/addNewCampaign',
@@ -71,8 +82,14 @@ import MyCampaign from "../components/MyCampaign";
 
     {
       path:'/details/:id',
-      element:<Details></Details>,
+      element:<PrivateRoutes><Details></Details></PrivateRoutes>,
       loader:({params}) => fetch(`http://localhost:3000/donation/${params.id}`)
+    },
+
+    {
+      path:'/updateMyCampaign/:id',
+      element:<UpdateMyCampaign></UpdateMyCampaign>,
+      loader: ({params}) => fetch(`http://localhost:3000/donation/${params.id}`)
     }
   
 ]

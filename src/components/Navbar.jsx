@@ -4,10 +4,15 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css"
 
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/Authprovider';
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme, isDarkMode }) => {
+  const [mode , setMode] = useState('light')
+  const handleToggle = () => {
+    setMode (mode === 'light'? 'dark' : 'light')
+    document.documentElement.setAttribute('data-theme' , mode === 'light'? 'dark' : 'light')
+  }
 
 
   const authInfo = useContext(AuthContext);
@@ -30,8 +35,9 @@ const Navbar = () => {
     <Link to='/'>Home</Link>
     <Link to='/allCampaign'>All Campaign</Link>
     <Link to='/myCampaign'>My Campaign</Link>
+    <Link to='/runnigCampaign'>Running Campaign</Link>
    
-    <Link to ='/tredingCampaings'>Treding Campaings</Link>
+    
     <Link to='/addNewCampaign'>Add New Campaign</Link>
     
     <Link to='/myDonations'>My Donations</Link>
@@ -73,7 +79,14 @@ const Navbar = () => {
             {link}
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex items-center gap-3">
+
+        <input onClick={handleToggle} type="checkbox" value="synthwave" className="toggle theme-controller" />
+
+       
+        
+
+          
         {user ? (
           <>
            
