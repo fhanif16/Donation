@@ -22,7 +22,7 @@ const AddChampaing = () => {
     
 
     const newDonation = {title,photo,option,description,donation,date,email,name};
-    console.log(newDonation)
+   // console.log(newDonation)
 
     fetch('http://localhost:3000/donation', {
       method:'POST',
