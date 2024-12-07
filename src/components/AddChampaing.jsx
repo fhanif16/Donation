@@ -22,7 +22,7 @@ const AddChampaing = () => {
     
 
     const newDonation = {title,photo,option,description,donation,date,email,name};
-   // console.log(newDonation)
+  
 
     fetch('https://heart-lift-serversite.vercel.app/donation', {
       method:'POST',
@@ -50,8 +50,6 @@ const AddChampaing = () => {
   )
 
   }
-
-
 
     return (
         <div>
