@@ -5,15 +5,29 @@ const RunningCham = () => {
   const originalDonations = useLoaderData();
   const [donations, setDonations] = useState(originalDonations);
 
-
+  
+  // useEffect(() => {
+  //   const today = new Date().toISOString().split('T')[0]; 
+  //   const filteredDonations = originalDonations.filter(donation => {
+  //     const donationDate = donation.date.split('T')[0]; 
+  //     return donationDate >= today; 
+  //   });
+  //   setDonations(filteredDonations);
+  // }, [originalDonations]);
   useEffect(() => {
-    const today = new Date().toISOString().split('T')[0]; 
-    const filteredDonations = originalDonations.filter(donation => {
-      const donationDate = donation.date.split('T')[0]; 
-      return donationDate >= today; 
-    });
-    setDonations(filteredDonations);
+    const today = new Date().toISOString().split('T')[0];
+  
+    if (Array.isArray(originalDonations)) {
+      const filteredDonations = originalDonations.filter(donation => {
+        const donationDate = donation.date.split('T')[0];
+        return donationDate >= today;
+      });
+      setDonations(filteredDonations);
+    } else {
+      console.error('originalDonations is not an array:', originalDonations);
+    }
   }, [originalDonations]);
+  
 
   const sortByDonationAmount = () => {
     const sortedDonations = [...donations].sort((a, b) => {

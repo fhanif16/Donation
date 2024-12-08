@@ -1,4 +1,5 @@
 Donation Website
+type:Tulip
 Overview
 This is a fully responsive donation website that allows users to add and update donations. The platform is built with React on the client side and MongoDB for the server-side database, while Firebase Authentication is used to manage user authentication, ensuring secure and personalized access to the platform.
 
